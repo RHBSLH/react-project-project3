@@ -1,45 +1,24 @@
+import { useContext, useRef } from "react"
+import ProjectContext from "../utils/ProjectContext"
 import styles from "./Com.module.css"
 
-function Com () {
-    return ( 
-        <>
-      
-<div className={styles.overlay}></div>
-<div className={styles.logoHolder}>
-  <div className={styles.logo}>
-    <a href="#" alt="Mahi Web" title="Mahi Web">
-      <span className={styles.mainTitle}>Larson</span>
-      <span className={styles.subTitle}>Architecture Studio</span>
-    </a>
-  </div>
-</div>
-<div className={styles.contentHolder}>
-  <h1>Coming Soon...</h1>
-  <p>In convallis risus ipsum, id rhoncus quam ultricies in donec metus odio<br/> tempus ut erat ac Duis sagittis est non interdum porttitor.</p>
-</div>
-<div className={styles.coundownHolder}>
-  <h2>Our website will be launched in:</h2>
-  {/* <div id="timer">
-    <div id="days"></div>
-    <div id="hours"></div>
-    <div id="minutes"></div>
-    <div id="seconds"></div>
-  </div> */}
-</div>
-<div className={styles.socialMedia}>
-  <ul>
-    <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true" data-tooltip="facebook"></i>
-</a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true" data-tooltip="twitter"></i>
-</a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-linkedin" aria-hidden="true" data-tooltip="linkedin"></i>
-</a></li>
-    <li><a href="#" target="_blank"><i class="fa fa-envelope" aria-hidden="true" data-tooltip="email us"></i>
-</a></li>
-  </ul>
-</div>
-</>
-     );
+function Com() {
+  const { aboutRef } = useContext(ProjectContext)
+  return (
+    <div className={styles.all} ref={aboutRef}>
+      <div className={styles.intro}>
+        <div className={styles.child}>
+          <h1>CAUPC</h1>
+          <p>
+            There is a problem in project owners presenting their projects, and there is also a difficulty in
+            communicating with companies. The idea of ​​the project is a site that brings together projects, whether for
+            users or companies, and it is easy to present projects of different types of fields, and it is also easy to
+            submit offers to them.
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default Com ;
+export default Com

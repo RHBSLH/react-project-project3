@@ -1,9 +1,10 @@
 nav {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-
-  padding: 50px 0;
+  left: 20px;
+  padding: 30px 0;
   position: absolute;
+
 }
 
 nav ul {
@@ -20,7 +21,7 @@ nav ul li a {
   padding: 15px;
   text-decoration: none;
   color: rgb(248, 245, 245);
-  font-weight: 800;
+  font-weight: 500;
   text-transform: uppercase;
   margin: 0 10px;
 }
@@ -32,7 +33,7 @@ nav ul li a:before {
 }
 
 nav ul li a:hover {
-  color: #555;
+  color: rgb(247, 231, 9);
 }
 
 
@@ -40,6 +41,7 @@ nav ul li a:hover {
 nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
+
   /* position: absolute; */
   /* z-index: 10; */
 }
@@ -54,7 +56,6 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
   height: 1px;
 }
 
@@ -84,4 +85,62 @@ nav.fill ul li a:hover:after {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(241, 239, 239, 0.5);
+  width: 100%;
+  height: 120%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.logoHolder {
+  text-align: center;
+  /* padding-top:90px; */
+  padding-bottom: 60px;
+}
+
+.logo {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+
+.logo:before {
+  content: '';
+  position: absolute;
+  height: 90px;
+  left: -20px;
+  width: 40px;
+  /* top: -20px; */
+  border-left: 3px solid #fbc711;
+  border-top: 3px solid #fbc711;
+  border-bottom: 3px solid #fbc711;
+}
+
+.logo a {
+  display: inline-block;
+  color: rgb(240, 238, 238);
+  text-decoration: none;
+}
+
+.logo a span {
+  display: block;
+  line-height: 1;
+}
+
+.logo a span.mainTitle {
+  font-weight: 600;
+  font-size: 40px;
+  top: 0px;
+}
+
+.logo a span.subTitle {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1px;
+
 }
